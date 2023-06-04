@@ -12,7 +12,6 @@ for(let i = 0;i < dropList.length ; i++){
 
         let optionTag =`<option value="${currency_code}">${currency_code}</option>`;
         dropList[i].insertAdjacentHTML("beforeend",optionTag);
-
     }
 }
 
@@ -22,5 +21,11 @@ for(let i = 0;i < dropList.length ; i++){
   });
 
   function getExchangeRate(){
-    const amount = document.querySelector("")
+    const amount = document.querySelector(".amount input");
+    let amountVal = amount.value;
+    if(amountVal == "" || amountVal=="0"){
+        amount.value="1";
+        amountVal=1;
+    }
+    let url = `https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/${fromCurrency.value}`;
   }
