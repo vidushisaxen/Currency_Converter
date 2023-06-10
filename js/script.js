@@ -14,7 +14,6 @@ for(let i = 0;i < dropList.length ; i++){
         dropList[i].insertAdjacentHTML("beforeend",optionTag);
     }
 }
-
   getButton.addEventListener("click", e=>{
     e.preventDefault();
     getExchangeRate();
